@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker with Graph</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Left Section: Pie Chart -->
+        <div class="chart-container">
+            <h3>Income vs Expense Chart</h3>
+            <canvas id="expenseChart"></canvas>
+        </div>
+
+        <!-- Right Section: Expense Tracker -->
+        <div class="tracker-container">
+            <h1>Expense Tracker</h1>
+            <div class="balance">
+                <h2>Balance: <span id="balance">₹0.00</span></h2>
+            </div>
+            <div class="income-expense">
+                <div>
+                    <h3>Income</h3>
+                    <p id="income">₹0.00</p>
+                </div>
+                <div>
+                    <h3>Expenses</h3>
+                    <p id="expense">₹0.00</p>
+                </div>
+            </div>
+            <h3>Add Transaction</h3>
+            <form id="transaction-form">
+                <input type="text" id="description" placeholder="Enter description" required>
+                <input type="number" id="amount" placeholder="Enter amount (e.g., 1000)" required>
+                <button type="submit">Add Transaction</button>
+            </form>
+            <h3>Transaction History</h3>
+            <ul id="transactions"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
